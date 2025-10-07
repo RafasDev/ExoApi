@@ -1,0 +1,9 @@
+C:\Projetos\ExoApi\Exo.WebApi\obj\Debug\net9.0\Exo.WebApi.csproj.AssemblyReference.cache
+C:\Projetos\ExoApi\Exo.WebApi\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Projetos\ExoApi\Exo.WebApi\obj\Debug\net9.0\Exo.WebApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\ExoApi\Exo.WebApi\obj\Debug\net9.0\Exo.WebApi.AssemblyInfoInputs.cache
+C:\Projetos\ExoApi\Exo.WebApi\obj\Debug\net9.0\Exo.WebApi.AssemblyInfo.cs
+C:\Projetos\ExoApi\Exo.WebApi\obj\Debug\net9.0\Exo.WebApi.csproj.CoreCompileInputs.cache
+C:\Projetos\ExoApi\Exo.WebApi\obj\Debug\net9.0\Exo.WebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Projetos\ExoApi\Exo.WebApi\obj\Debug\net9.0\Exo.WebApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Projetos\ExoApi\Exo.WebApi\obj\Debug\net9.0\Exo.WebApi.sourcelink.json

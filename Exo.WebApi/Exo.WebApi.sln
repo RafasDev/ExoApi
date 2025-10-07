@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exo.WebApi", "Exo.WebApi\Exo.WebApi.csproj", "{DDED0D50-07D9-4B5B-4BE3-CF9BFAF1EE7A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exo.WebApi", "Exo.WebApi.csproj", "{986099DD-F02A-B314-8BDE-97D1F2EBD7D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,15 +10,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DDED0D50-07D9-4B5B-4BE3-CF9BFAF1EE7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DDED0D50-07D9-4B5B-4BE3-CF9BFAF1EE7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DDED0D50-07D9-4B5B-4BE3-CF9BFAF1EE7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DDED0D50-07D9-4B5B-4BE3-CF9BFAF1EE7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{986099DD-F02A-B314-8BDE-97D1F2EBD7D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{986099DD-F02A-B314-8BDE-97D1F2EBD7D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{986099DD-F02A-B314-8BDE-97D1F2EBD7D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{986099DD-F02A-B314-8BDE-97D1F2EBD7D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {33782C77-30A3-45E7-B4D2-6C1AFE7D6718}
+		SolutionGuid = {046A6EC4-CC45-440C-A96D-5A3201A5A9A2}
 	EndGlobalSection
 EndGlobal

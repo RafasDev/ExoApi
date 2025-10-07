@@ -550,3 +550,4 @@ C:\Projetos\ExoApi\Exo.WebApi\obj\Debug\net6.0\Exo.WebApi.MvcApplicationPartsAss
 C:\Projetos\ExoApi\Exo.WebApi\obj\Debug\net6.0\Exo.WebApi.dll
 C:\Projetos\ExoApi\Exo.WebApi\obj\Debug\net6.0\refint\Exo.WebApi.dll
 C:\Projetos\ExoApi\Exo.WebApi\obj\Debug\net6.0\Exo.WebApi.pdb
+C:\Projetos\ExoApi\Exo.WebApi\obj\Debug\net6.0\Exo.WebApi.sourcelink.json

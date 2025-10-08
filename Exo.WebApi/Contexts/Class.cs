@@ -2,7 +2,7 @@
 
 namespace Exo.WebApi.Contexts
 {
-    public class ExoContext: DbContext
+    public class ExoContext : DbContext
     {
         public ExoContext()
         {

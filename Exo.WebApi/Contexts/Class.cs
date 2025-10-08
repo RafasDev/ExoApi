@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Exo.WebApi.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Exo.WebApi.Contexts
 {

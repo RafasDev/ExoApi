@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Exo.WebApi.Repositories;
+using Exo.WebApi.Models;
 
 namespace Exo.WebApi.Controllers
 {
@@ -9,20 +10,77 @@ namespace Exo.WebApi.Controllers
     public class ProjetoController : ControllerBase
     {
         private readonly ProjetoRepository _projetoRepository;
-        private readonly ILogger<ProjetoController> _logger;
 
-        public ProjetoController(ProjetoRepository projetoRepository, ILogger<ProjetoController> logger)
+        public ProjetoController(ProjetoRepository projetoRepository)
         {
             _projetoRepository = projetoRepository;
-            _logger = logger;
         }
 
-   
         [HttpGet]
         public IActionResult Listar()
         {
-            _logger.LogInformation("Listando todos os projetos...");
             return Ok(_projetoRepository.Listar());
         }
+
+        [HttpPost]
+        public IActionResult Cadastrar(Projeto projeto)
+        {
+            try
+            {
+                _projetoRepository.Cadastrar(projeto);
+                return Ok();
+            }
+            catch (System.Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult BuscarPorId(int id)
+        {
+            Projeto projeto = _projetoRepository.BuscarPorId(id);
+            if (projeto == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(projeto);
+            }
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Atualizar(int id, Projeto projeto)
+        {
+            try
+            {
+                _projetoRepository.Atualizar(id, projeto);
+                return Ok();
+            }
+            catch (System.Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Deletar(int id)
+        {
+            try
+            {
+                _projetoRepository.Deletar(id);
+                return Ok();
+            }
+            catch (System.Exception ex)
+            {
+
+                return BadRequest(ex.Message);
+            }
+        }
+
     }
 }

@@ -14,7 +14,7 @@ namespace Exo.WebApi.Contexts
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=HOUSTONTrusted_Connection=True;TrustServerCertificate=True;");
+                optionsBuilder.UseSqlServer("Server=HOUSTON;Database=ExoApi;Trusted_Connection=True;TrustServerCertificate=True;");
             }
         }
 

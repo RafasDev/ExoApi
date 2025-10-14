@@ -11,7 +11,7 @@ namespace Exo.WebApi.Controllers
     {
         private readonly UsuarioRepository _usuarioRepository;
 
-        public UsarioController(UsuarioRepository usuarioRepository)
+        public UsuarioController(UsuarioRepository usuarioRepository)
         {
             _usuarioRepository = usuarioRepository;
         }

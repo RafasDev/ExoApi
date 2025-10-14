@@ -1,33 +1,33 @@
-using Microsoft.AspNetCore.Mvc;
 using Exo.WebApi.Repositories;
 using Exo.WebApi.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Exo.WebApi.Controllers
 {
-    
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class ProjetoController : ControllerBase
+    public class UsuarioController : ControllerBase
     {
-        private readonly ProjetoRepository _projetoRepository;
+        private readonly UsuarioRepository _usuarioRepository;
 
-        public ProjetoController(ProjetoRepository projetoRepository)
+        public UsarioController(UsuarioRepository usuarioRepository)
         {
-            _projetoRepository = projetoRepository;
+            _usuarioRepository = usuarioRepository;
         }
 
         [HttpGet]
         public IActionResult Listar()
         {
-            return Ok(_projetoRepository.Listar());
+            return Ok(_usuarioRepository.Listar());
         }
 
         [HttpPost]
-        public IActionResult Cadastrar(Projeto projeto)
+        public IActionResult Cadastrar(Usuario usuario)
         {
             try
             {
-                _projetoRepository.Cadastrar(projeto);
+                _usuarioRepository.Cadastrar(usuario);
                 return Ok();
             }
             catch (System.Exception ex)
@@ -41,23 +41,23 @@ namespace Exo.WebApi.Controllers
         [HttpGet("{id}")]
         public IActionResult BuscarPorId(int id)
         {
-            Projeto projeto = _projetoRepository.BuscarPorId(id);
-            if (projeto == null)
+            Usuario usuario = _usuarioRepository.BuscarPorId(id);
+            if (usuario == null)
             {
                 return NotFound();
             }
             else
             {
-                return Ok(projeto);
+                return Ok(usuario);
             }
         }
 
         [HttpPut("{id}")]
-        public IActionResult Atualizar(int id, Projeto projeto)
+        public IActionResult Atualizar(int id, Usuario usuario)
         {
             try
             {
-                _projetoRepository.Atualizar(id, projeto);
+                _usuarioRepository.Atualizar(id, usuario);
                 return Ok();
             }
             catch (System.Exception ex)
@@ -72,7 +72,7 @@ namespace Exo.WebApi.Controllers
         {
             try
             {
-                _projetoRepository.Deletar(id);
+                _usuarioRepository.Deletar(id);
                 return Ok();
             }
             catch (System.Exception ex)
@@ -81,6 +81,5 @@ namespace Exo.WebApi.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
     }
 }

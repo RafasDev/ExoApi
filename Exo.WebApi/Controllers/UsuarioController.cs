@@ -1,6 +1,10 @@
 using Exo.WebApi.Repositories;
 using Exo.WebApi.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos;
 
 namespace Exo.WebApi.Controllers
 {
@@ -22,20 +26,38 @@ namespace Exo.WebApi.Controllers
             return Ok(_usuarioRepository.Listar());
         }
 
-        [HttpPost]
-        public IActionResult Cadastrar(Usuario usuario)
+
+        // [HttpPost]
+        // public IActionResult Cadastrar(Usuario usuario)
+        // {
+        //     try
+        //     {
+        //         _usuarioRepository.Cadastrar(usuario);
+        //         return Ok();
+        //     }
+        //     catch (System.Exception ex)
+        //     {
+        //         return BadRequest(ex.Message);
+        //     }
+        // }
+        public IActionResult Post(Usuario usuario)
         {
-            try
+            Usuario usuarioBuscado = _usuarioRepository.Login(usuario.Email, usuario.Senha);
+            if (usuarioBuscado == null)
             {
-                _usuarioRepository.Cadastrar(usuario);
-                return Ok();
+                return NotFound("Senha ou Email invalidos");
             }
-            catch (System.Exception ex)
+            else
             {
-                return BadRequest(ex.Message);
+                var claims = new[]
+                {
+                   new Claim(JwtRegisteredClaimNames.Email, usuarioBuscado.Email),
+                   new Claim(JwtRegisteredClaimNames.Jti, usuarioBuscado.Id.ToString()),
+                };
+                var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("exoapi-chave-autenticacao"));
+                var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+                
             }
-
-
         }
 
         [HttpGet("{id}")]

@@ -5,6 +5,7 @@ using System.Security.Claims;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Exo.WebApi.Controllers
 {
@@ -83,7 +84,7 @@ namespace Exo.WebApi.Controllers
             }
         }
 
-        
+        [Authorize]
         [HttpPut("{id}")]
         public IActionResult Atualizar(int id, Usuario usuario)
         {
@@ -98,7 +99,7 @@ namespace Exo.WebApi.Controllers
             }
 
         }
-
+        [Authorize]
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id)
         {

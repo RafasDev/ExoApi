@@ -56,7 +56,16 @@ namespace Exo.WebApi.Controllers
                 };
                 var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("exoapi-chave-autenticacao"));
                 var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-                
+                var token = new JwtSecurityToken(
+                    issuer: "exoapi.webapi",
+                    audience: "exoapi.webapi",
+                    claims: claims,
+                    expires: DateTime.Now.AddMinutes(15),
+                    signingCredentials: creds
+                );
+                return Ok(
+                    new { token = new JwtSecurityTokenHandler().WriteToken(token) }
+                );
             }
         }
 
@@ -74,6 +83,7 @@ namespace Exo.WebApi.Controllers
             }
         }
 
+        
         [HttpPut("{id}")]
         public IActionResult Atualizar(int id, Usuario usuario)
         {

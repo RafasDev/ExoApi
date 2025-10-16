@@ -19,3 +19,25 @@ Disponibilizar o recurso de deletar ou atualizar um projeto, somente para usuár
 Para concluir esse projeto, você deverá solucionar os seguintes desafios:
 Desenvolver a API do aplicativo, disponibilizando os recursos para leitura, escrita, atualização e deleção dos projetos e usuários.
 Restringir o acesso aos recursos da API aos usuários autenticados, visando a integridade e segurança da informação.
+
+
+🚀 Tecnologias
+
+Linguagem: C#
+
+Banco de Dados: SQL Server
+
+Framework: .NET 9.0
+
+Tipo de aplicação: WebApi
+
+
+⚙️ Como Executar
+
+Pré-requisitos: Instalar o .NET SDK (versão recomendada: 8.0 e 9.0), Banco de Dados SQL Server
+
+Clonar o repositório git clone https://github.com/RafasDev/https://github.com/RafasDev/ExoApi.git
+
+Compilar e executar no terminal use: dotnet run, e coloque no postman ou no insomnia https://localhost:7154
+
+!Atenção! atualizar ou deletar usuários ire ser necessário gerar um token com 15 minutos de validade.
